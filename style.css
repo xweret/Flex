@@ -30,6 +30,8 @@ li {
     gap: 1.5rem;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif; 
+    flex-wrap: wrap;
+    
 }
 
 .servicios {
@@ -38,17 +40,19 @@ li {
     width: 20%;
     height: 700px;
     margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 10px;
 
 }
 
+img {
 
+    border-radius: 50%;
+    align-items: center;
+    padding-left: 50px;
 
-.lado2 {
-    background-color: #f87a7d;
-    width: 60%;
-    margin-top: 1rem;
-    justify-content: center;
-    
 }
 
 h6 {
@@ -69,26 +73,94 @@ h6 {
                     
         }
 
+              /* padre del padre  */
+
+        .lado2 {
+            background-color: #f87a7d;
+            width: 60%;
+            margin-top: 1rem;
+            justify-content: center;
+            display: flex;
+            
+        }
+
+            /* padre del padre  */
+  
+
     .padre {
         background-color: #fdaaad;
         align-items: center;
         width: 95%;
         margin-top: 250px;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 10px;
+        gap: 1.5rem;
+        align-items: flex-end;
+        ;
 
     }
 
     .hijo1  {
         background-color:#d9d5d7;
-        margin-top: 100px;
+        width: 300px;
+        height: 300px;
+        margin-left: 10px;
+        padding: 20px;
+    
+
     } 
 
     .hijo2  {
         background-color:#d9d5d7;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
     } 
 
     .hijo3  {
         background-color:#d9d5d7;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin-right: 10px;
+        
     } 
+
+    .textopadre {
+        position: absolute;
+        top: 40%;
+        left: 57%;
+    }
     
+    .titulo {
+        position: absolute;
+        padding-top: 1rem;
+        font-size: 22px;
+        font-weight: 500;
+        
+    }
+
+
+   @media screen and (max-width: 1032px) {
+       * {
+       flex-direction: column;
+       }
+    
+       .servicios {
+           flex-wrap: wrap;
+           width: 90%;
+
+       }
+
+       main {
+           justify-content: center;
+           padding: 10px
+       }
+
+       .textopadre {
+           display: none;
+       }
+
+   }
